@@ -4,11 +4,13 @@ import Header from "./components/Header";
 import NameForm from './components';
 import SearchBar from './components/SearchBar';
 import Room from './components/Room';
+import Visits from './components/Visits';
 function App() {
   return (
     <div className="App">
      <Header/>
-     <SearchBar/> 
+     <SearchBar/>
+     <Visits/> 
      <Room/>
      {/* <NameForm/> */}
     </div>
