@@ -29,7 +29,7 @@ const Visits = () => {
   }
 
   return (
-    <div>
+    <div className='visit'>
       <h1>Famous clicks of our customers</h1>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
         {images.map((url, index) => (

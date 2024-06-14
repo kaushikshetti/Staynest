@@ -1,6 +1,5 @@
 .App {
     text-align: center;
-    padding-bottom:15%;
   }
   
   h1 {
@@ -12,3 +11,6 @@
     border-radius: 10px;
   }
   
+  .visit{
+    padding-bottom:1.9%;
+  }

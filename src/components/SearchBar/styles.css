@@ -1,6 +1,7 @@
 /* SearchBar.css */
 
 .search-bar-container {
+    padding-top: 5%;
     display: flex;
     align-items: center;
     background-color: #f5f5f5;
