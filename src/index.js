@@ -13,7 +13,7 @@ import Root from "./routes/root";
 // Import the Redux store and Provider
 import { Provider } from 'react-redux';
 
-import store from '../../Staynest React/src/components/redux/slices/createSlice'
+import store from './components/redux/slices/createSlice'
 
 const router = createBrowserRouter([
   {
