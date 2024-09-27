@@ -14,9 +14,6 @@ export default function index() {
             <div className="search-bar-text">Any week</div>
             <div className="search-bar-text">Add Guest</div>
         </div>
-       {/* <div className="profile-container">
-            hello
-         </div> */}
     </div>
   )
 }

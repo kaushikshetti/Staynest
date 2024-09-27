@@ -15,10 +15,33 @@ const counterSlice = createSlice({
   }
 })
 
+// Sidebar Slice for managing `isOpen`
+const sidebarSlice = createSlice({
+  name: 'sidebar',
+  initialState: {
+    isOpen: false
+  },
+  reducers: {
+    toggleSidebar: state => {
+      state.isOpen = !state.isOpen;
+    },
+    closeSidebar: state => {
+      state.isOpen = false;
+    },
+    openSidebar: state => {
+      state.isOpen = true;
+    }
+  }
+});
+
+
+
 export const { incremented, decremented } = counterSlice.actions
+export const { toggleSidebar, closeSidebar, openSidebar } = sidebarSlice.actions;
 
 const store = configureStore({
-  reducer: counterSlice.reducer
+  reducer: counterSlice.reducer,
+  sidebar: sidebarSlice.reducer
 })
 
 export default store;
@@ -31,4 +54,4 @@ export default store;
 // store.dispatch(incremented())
 // // {value: 2}
 // store.dispatch(decremented())
-// {value: 1}
+// {value: 1

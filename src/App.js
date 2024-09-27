@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar';
 import Visits from './components/Visits';
 import Room from './components/Room';
 import RentalCard from './components/Rental/RentalCard';
+import Sidebar from './components/Sidebar';
 import FavoritesList from './components/Rental/FavoritesList';
 const rentals = [
   { id: 1, name: 'Beach House', description: 'A nice beach house.' },
@@ -13,7 +14,8 @@ const rentals = [
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Sidebar />
+      {/* <Header /> */}
       <SearchBar />
       <Visits />
       <Room />
