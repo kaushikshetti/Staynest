@@ -9,6 +9,7 @@ import {
 import reportWebVitals from './reportWebVitals';
 import { FavoritesProvider } from './contexts/FavoritesContext';
 import Root from "./routes/root";
+import DrawerAppBar from "./routes/material-ui"
 
 // Import the Redux store and Provider
 import { Provider } from 'react-redux';
@@ -17,12 +18,16 @@ import store from './components/redux/slices/createSlice'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/main",
     element: <App />,
   },
   {
     path: "/home",
     element: <Root />
+  },
+  {
+    path: "/",
+    element: <DrawerAppBar />
   },
 ]);
 
