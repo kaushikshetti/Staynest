@@ -26,7 +26,10 @@ function Room() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Available Rooms</h1>
+        <h1></h1>
+        <h1 className="text-3xl font-bold underline">
+      Available Rooms
+    </h1>
         <label>
           Minimum Guests:
           <select value={guestFilter} onChange={handleGuestFilterChange}>

@@ -1,4 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .App {
+  margin-top:2rem;
     text-align: center;
 
   }
