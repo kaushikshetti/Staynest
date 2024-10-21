@@ -19,13 +19,11 @@ import Visits from '../components/Visits';
 import Room from '../components/Room';
 import RentalCard from '../components/Rental/RentalCard';
 import FavoritesList from '../components/Rental/FavoritesList';
+import logo from "../assets/logo/logo1.png";
+import CustomAppBar from "../components/Header"
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
-const rentals = [
-  { id: 1, name: 'Beach House', description: 'A nice beach house.' },
-  { id: 2, name: 'Mountain Cabin', description: 'A cozy mountain cabin.' },
-];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -38,7 +36,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        <img src={logo} alt="logo" style={{ height: '40px' }} />
       </Typography>
       <Divider />
       <List>
@@ -56,36 +54,11 @@ function DrawerAppBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav">
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            MUI
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
+      {/* Use CustomAppBar here */}
+      <CustomAppBar handleDrawerToggle={handleDrawerToggle} />
+      
       <nav>
         <Drawer
           container={container}
@@ -103,29 +76,18 @@ function DrawerAppBar(props) {
           {drawer}
         </Drawer>
       </nav>
-      {/* Wrap the following elements in a parent container */}
+
       <Box sx={{ p: 3 }}>
         <Toolbar />
         <SearchBar />
         <Visits />
         <Room />
-        {/* <div>
-          <h1>Rental Properties</h1>
-          {rentals.map((rental) => (
-            <RentalCard key={rental.id} rental={rental} />
-          ))}
-          <FavoritesList />
-        </div> */}
       </Box>
     </Box>
   );
 }
 
 DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 

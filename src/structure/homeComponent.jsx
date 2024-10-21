@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import store, { incremented, decremented } from '../../src/components/redux/slices/createSlice'
+import store, { incremented, decremented } from '../components/redux/slices/createSlice'
 
 const user = {
   name: 'Hedy Lamarr',

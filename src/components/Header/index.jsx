@@ -1,19 +1,52 @@
-import React, { useState } from 'react';
-import { FaBars } from 'react-icons/fa';
-import "./styles.css"
-import logo from "../../assets/logo/logo1.png"
-export default function index() {
+import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import PropTypes from 'prop-types';
+import logo from "../../assets/logo/logo1.png";
 
 
+const navItems = ['Home', 'About', 'Contact'];
+
+function CustomAppBar({ handleDrawerToggle }) {
   return (
-   
-    <div className='navbar'>
-         <img src={logo} alt="logo" className='navbar-logo' />
-         <div className="search-bar">
-            <div className="search-bar-text">Anywhere</div>
-            <div className="search-bar-text">Any week</div>
-            <div className="search-bar-text">Add Guest</div>
-        </div>
-    </div>
-  )
+    <AppBar component="nav">
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        {/* Logo */}
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <img src={logo} alt="logo" style={{ height: '40px' }} />
+        </Box>
+
+        {/* Navigation items for desktop */}
+        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          {navItems.map((item) => (
+            <Button key={item} sx={{ color: '#fff' }}>
+              {item}
+            </Button>
+          ))}
+        </Box>
+
+        {/* Hamburger Icon for mobile on the right */}
+        <IconButton
+          color="inherit"
+          aria-label="open drawer"
+          edge="end"
+          onClick={handleDrawerToggle}
+          sx={{ display: { sm: 'none' } }}
+        >
+          <MenuIcon />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
+  );
 }
+
+CustomAppBar.propTypes = {
+  handleDrawerToggle: PropTypes.func.isRequired,
+};
+
+export default CustomAppBar;

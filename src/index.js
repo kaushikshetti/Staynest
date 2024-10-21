@@ -8,8 +8,8 @@ import {
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import { FavoritesProvider } from './contexts/FavoritesContext';
-import Root from "./routes/root";
-import DrawerAppBar from "./routes/material-ui"
+import Root from "./structure/homeComponent";
+import DrawerAppBar from "./structure/entireSite"
 
 // Import the Redux store and Provider
 import { Provider } from 'react-redux';
