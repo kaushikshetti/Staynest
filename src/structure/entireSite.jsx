@@ -21,6 +21,7 @@ import RentalCard from '../components/Rental/RentalCard';
 import FavoritesList from '../components/Rental/FavoritesList';
 import logo from "../assets/logo/logo1.png";
 import CustomAppBar from "../components/Header"
+import Footer from "../components/Footer"
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
@@ -82,6 +83,7 @@ function DrawerAppBar(props) {
         <SearchBar />
         <Visits />
         <Room />
+        <Footer />
       </Box>
     </Box>
   );
