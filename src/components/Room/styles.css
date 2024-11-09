@@ -1,44 +1,69 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Background color for the main container */
 .App {
-  margin-top:2rem;
-    text-align: center;
+  background-color: #f0f0f0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
 
-  }
-  
-  .App-header {
+/* Header styling */
+.App-header {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+}
 
-    background-color: #031432;
-    min-height: 30vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-  
-  label {
-    margin: 20px;
-    font-size: 16px;
-  }
-  
-  select {
-    margin-left: 10px;
-    padding: 5px;
-    font-size: 16px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    background-color: #61dafb;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
+/* Title styling */
+.App-header h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Dropdown label and select styling */
+.App-header label {
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Dropdown select styling */
+.App-header select {
+  margin-left: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Room list styling */
+.App-header ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.App-header li {
+  padding: 10px;
+  background-color: #e0e0e0;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+/* Dropdown and list hover effect */
+.App-header select:hover,
+.App-header li:hover {
+  background-color: #d4d4d4;
+  cursor: pointer;
+}

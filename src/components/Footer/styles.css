@@ -1,0 +1,84 @@
+/* Footer Styling */
+footer {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Title Section */
+  footer .MuiTypography-h6 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  /* Navigation Links */
+  footer .MuiBox-root a {
+    font-size: 0.95rem;
+    color: #333;
+    margin-right: 20px;
+    transition: color 0.3s;
+  }
+  
+  footer .MuiBox-root a:hover {
+    color: #1e90ff; /* Primary hover color */
+  }
+  
+  /* Divider */
+  footer .MuiDivider-root {
+    background-color: #e0e0e0;
+    margin: 16px 0;
+  }
+  
+  /* Destination Links */
+  footer .MuiGrid-root .MuiTypography-body2 {
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+  }
+  
+  footer .MuiGrid-root .MuiTypography-body2:hover {
+    color: #1e90ff; /* Primary hover color */
+  }
+  
+  footer .MuiTypography-caption {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  /* Secondary Links */
+  footer .MuiBox-root .MuiLink-root {
+    color: #333;
+    font-size: 0.9rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  footer .MuiBox-root .MuiLink-root:hover {
+    color: #1e90ff;
+  }
+  
+  /* Copyright Section */
+  footer .MuiTypography-caption {
+    color: #666;
+    font-size: 0.8rem;
+  }
+  
+  footer .MuiTypography-caption a {
+    color: #666;
+    font-size: 0.8rem;
+  }
+  
+  footer .MuiTypography-caption a:hover {
+    color: #1e90ff;
+  }
+  
+  /* Social Media Links */
+  footer .MuiBox-root i {
+    font-size: 1.2rem;
+    color: #666;
+    transition: color 0.3s;
+  }
+  
+  footer .MuiBox-root i:hover {
+    color: #1e90ff;
+  }
+  

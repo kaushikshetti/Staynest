@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./styles.css";
 import "../../assets/logo/logo.png"
+import backgroundImage from "../../assets/bg.jpg"
 const Visits = () => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -30,7 +31,7 @@ const Visits = () => {
 
   return (
     <div>
- <div className="relative w-full h-96 bg-cover bg-center" style={{ backgroundImage: 'url(https://unsplash.com/photos/a-waterfall-with-a-mountain-in-the-background-MRbfimmEUU8)' }}>
+ <div className="relative w-full h-96 bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
     <h1 className="text-white text-4xl font-bold">Welcome to your one stop booking for hotel</h1>
   </div>
@@ -45,7 +46,7 @@ const Visits = () => {
         </div>
       </div>
       
-      <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+      {/* <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         <div className="md:flex">
           <div className="md:shrink-0">
             <img className="h-48 w-full object-cover md:h-full md:w-48" src="https://picsum.photos/500/300" alt="Modern building architecture" />
@@ -56,7 +57,7 @@ const Visits = () => {
             <p className="mt-2 text-slate-500">Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of places to do just that.</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

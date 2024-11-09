@@ -9,16 +9,13 @@ function Room() {
     { id: 4, name: "Beach House", guests: 6 }
   ];
 
-  // Declare state variables for rooms and filter
   const [rooms] = useState(initialRooms);
   const [guestFilter, setGuestFilter] = useState(0);
 
-  // Function to handle guest filter change
   const handleGuestFilterChange = (e) => {
     setGuestFilter(parseInt(e.target.value));
   };
 
-  // Filter rooms based on guest filter
   const filteredRooms = guestFilter > 0 
     ? rooms.filter(room => room.guests >= guestFilter) 
     : rooms;

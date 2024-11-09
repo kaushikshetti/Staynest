@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Grid, Typography, Link, Divider, Box } from '@mui/material';
-
+import './styles.css';
 function Footer() {
   return (
     <Box component="footer" sx={{ bgcolor: 'background.paper', py: 4 }}>
