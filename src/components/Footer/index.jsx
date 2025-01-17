@@ -46,7 +46,7 @@ function Footer() {
 
         <Box sx={{ textAlign: 'center' }}>
           <Typography variant="caption" color="text.secondary">
-            © 2024 Airbnb, Inc. · <Link href="#" color="inherit">Privacy</Link> · <Link href="#" color="inherit">Terms</Link> · <Link href="#" color="inherit">Site Map</Link>
+            © 2025 Staynest, Inc. · <Link href="#" color="inherit">Privacy</Link> · <Link href="#" color="inherit">Terms</Link> · <Link href="#" color="inherit">Site Map</Link>
           </Typography>
           <Box sx={{ mt: 1, display: 'flex', justifyContent: 'center', gap: 2 }}>
             <Link href="#" color="inherit"><i className="fab fa-facebook"></i></Link>

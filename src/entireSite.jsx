@@ -14,14 +14,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import SearchBar from '../components/SearchBar';
-import Visits from '../components/Visits';
-import Room from '../components/Room';
-import RentalCard from '../components/Rental/RentalCard';
-import FavoritesList from '../components/Rental/FavoritesList';
-import logo from "../assets/logo/logo1.png";
-import CustomAppBar from "../components/Header"
-import Footer from "../components/Footer"
+import SearchBar from './components/SearchBar';
+import Visits from './components/Visits';
+import Room from './components/Room';
+import RentalCard from './components/Rental/RentalCard';
+import FavoritesList from './components/Rental/FavoritesList';
+import logo from "../src/assets/logo/logo.png";
+import CustomAppBar from "./components/Header"
+import Footer from "./components/Footer"
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
