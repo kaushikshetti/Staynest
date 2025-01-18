@@ -14,43 +14,24 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import SearchBar from './components/SearchBar';
-import Visits from './components/Visits';
-import Room from './components/Room';
-import RentalCard from './components/Rental/RentalCard';
-import FavoritesList from './components/Rental/FavoritesList';
-import logo from "../src/assets/logo/logo.png";
-import CustomAppBar from "./components/Header"
-import Footer from "./components/Footer"
+import SearchBar from '../components/SearchBar';
+import Visits from '../components/Visits';
+import Room from '../components/Room';
+import RentalCard from '../components/Rental/RentalCard';
+import FavoritesList from '../components/Rental/FavoritesList';
+import logo from '../assets/logo/logo.png';
+import CustomAppBar from "../components/Header"
+import Footer from "../components/Footer"
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
 
-function DrawerAppBar(props) {
+function Main(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        <img src={logo} alt="logo" style={{ height: '40px' }} />
-      </Typography>
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
@@ -74,7 +55,7 @@ function DrawerAppBar(props) {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
-          {drawer}
+  
         </Drawer>
       </nav>
 
@@ -89,8 +70,8 @@ function DrawerAppBar(props) {
   );
 }
 
-DrawerAppBar.propTypes = {
+Main.propTypes = {
   window: PropTypes.func,
 };
 
-export default DrawerAppBar;
+export default Main;

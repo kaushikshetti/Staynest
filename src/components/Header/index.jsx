@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import logo from "../../assets/logo/logo1.png";
-
+import { Link } from 'react-router-dom';
 
 const navItems = ['Home', 'About', 'Contact'];
 
@@ -25,7 +25,7 @@ function CustomAppBar({ handleDrawerToggle }) {
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           {navItems.map((item) => (
             <Button key={item} sx={{ color: '#fff' }}>
-              {item}
+              <Link to="/home" style={{ color: '#fff', textDecoration: 'none' }}>{item}</Link>
             </Button>
           ))}
         </Box>

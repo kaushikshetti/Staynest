@@ -38,7 +38,7 @@ function Footer() {
         </Grid>
 
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
-          <Link href="#" sx={{ mx: 2 }}>Airbnb</Link>
+          <Link href="#" sx={{ mx: 2 }}>Staynest</Link>
           <Link href="#" sx={{ mx: 2 }}>India</Link>
         </Box>
 
